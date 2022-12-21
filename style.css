@@ -1,0 +1,304 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	font-size: 62.5%;
+	font-family: 'IBM Plex Sans', sans-serif;
+	background: rgb(248, 248, 248);
+	color: #121212;
+	line-height: 1;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+ul {
+	list-style-type: none;
+}
+
+code {
+	background: rgb(240, 240, 240);
+	padding: 0.2rem;
+}
+
+.avatar {
+	height: 4rem;
+	width: 4rem;
+	border-radius: 50%;
+}
+
+.header-bar {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	justify-content: space-evenly;
+	padding: 4rem 1rem 0 1rem;
+}
+
+.header-bar li {
+	font-size: 1.6rem;
+}
+
+.header-bar br {
+	display: none;
+}
+
+.header-bar span {
+	font-weight: 500;
+}
+
+.header-bar li:last-of-type {
+	display: flex;
+	gap: 0.5rem;
+	font-size: 2.4rem;
+}
+
+.header-bar i {
+	transition: all 200ms ease-in;
+}
+.header-bar i:hover {
+	animation: color-change 4s ease-in-out infinite;
+	transform: scale(1.1);
+}
+
+.project-cards-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 5rem;
+}
+
+.project-card {
+	background: white;
+	width: 32rem;
+	height: 38rem;
+	padding: 2rem 1rem;
+	border-radius: 20px;
+	box-shadow: 0 1px 32px rgba(0, 0, 0, 0.1);
+	transition: all 200ms ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 5px 5px 0 rgba(0, 0, 0, 1), -1px -1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.project-card:first-of-type {
+	background: #121212;
+	color: white;
+	padding: 3rem;
+}
+
+.project-card:hover {
+	transform: scale(1.05);
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 1),
+		-1px -1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.project-tags ul {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.project-tags li {
+	padding: 0.8rem;
+	border-radius: 20px;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+.project-tags i {
+	margin-right: 0.4rem;
+}
+
+.project-title {
+	text-align: center;
+	margin: 1.6rem auto;
+}
+
+.project-title h1 {
+	font-size: 2.5rem;
+	margin: 0;
+}
+
+.project-title h2 {
+	font-size: 1.6rem;
+	font-weight: 400;
+	margin: 0;
+}
+
+.date {
+	color: rgb(85, 85, 85);
+	align-self: end;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+}
+
+.project-desc p {
+	font-size: 1.2rem;
+	line-height: 1.4;
+	padding: 0 2rem;
+}
+
+.project-links {
+	display: flex;
+	margin: 2rem;
+	gap: 1rem;
+}
+
+.project-links a {
+	margin: 0 auto;
+}
+
+.project-links button {
+	display: block;
+	border: none;
+	background: #121212;
+	color: white;
+	padding: 1rem;
+	border-radius: 16px;
+	font-weight: 700;
+	font-size: 1.4rem;
+}
+
+.project-links button:hover {
+	animation: color-change 4s ease-in-out infinite;
+	cursor: pointer;
+}
+
+.first-card-links button {
+	border: 1px solid white;
+}
+
+footer {
+	margin: 4rem auto;
+}
+
+.footer-text {
+	font-size: 1.2rem;
+	font-weight: 400;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.footer-text span {
+	font-weight: 600;
+}
+
+.footer-text a:hover {
+	animation: color-change 4s ease-in-out infinite;
+}
+
+@keyframes color-change {
+	0% {
+		color: #ff8e5d;
+	}
+	25% {
+		color: #5b89f6;
+	}
+	50% {
+		color: #d0bf50;
+	}
+	75% {
+		color: rgb(214, 123, 241);
+	}
+
+	100% {
+		color: #02d083;
+	}
+}
+.html {
+	background: #ff8e5d;
+}
+
+.css {
+	background: #5b89f6;
+}
+
+.js {
+	background: #e4ce3d;
+}
+
+.bs {
+	background: rgb(214, 123, 241);
+}
+
+.api {
+	background: #e18399;
+}
+
+.figma {
+	background: #02d083;
+}
+
+.json {
+	background: rgb(190, 190, 190);
+}
+
+.design {
+	background: rgb(106, 106, 221);
+}
+
+.frontend {
+	background: rgb(67, 67, 136);
+}
+
+@media only screen and (max-width: 1000px) {
+	.project-cards-wrapper {
+		grid-template-columns: repeat(2, auto);
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.header-bar li:last-of-type {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+	}
+
+	.project-cards-wrapper {
+		grid-template-columns: auto;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.header-bar li:nth-of-type(2) {
+		font-size: 1.4rem;
+		text-align: center;
+		line-height: 1.4;
+	}
+
+	.divider {
+		display: none;
+	}
+	.header-bar br {
+		display: block;
+	}
+}
